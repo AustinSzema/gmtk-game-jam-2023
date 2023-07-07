@@ -6,7 +6,9 @@ public class AutoJump : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float jumpForce = 10f;
-   
+
+    [SerializeField] private LayerMask whatIsGround;
+
     private bool grounded;
 
     private void Update()
@@ -31,13 +33,20 @@ public class AutoJump : MonoBehaviour
 
         );
 
-        grounded = Physics2D.Raycast(transform.position, Vector2.down, transform.localScale.y * 0.5f + 0.3f);
+        
 
         if (boxcast && grounded)
         {
             Jump();
         }*/
 
+        grounded = Physics2D.Raycast(transform.position, Vector2.down, transform.localScale.y * 0.5f + 0.3f);
+
+        Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - transform.localScale.y / 2f), Vector2.right, Color.yellow, 100f);
+
+        if(Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - transform.localScale.y/2f), Vector2.right, 2f, whatIsGround) && grounded){
+            Jump();
+        }
 
 
     }
