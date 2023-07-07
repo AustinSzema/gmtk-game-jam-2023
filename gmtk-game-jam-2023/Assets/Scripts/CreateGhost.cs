@@ -11,6 +11,7 @@ public class CreateGhost : MonoBehaviour
 
     private GameObject _ghost;
     [SerializeField] private int count = 5;
+    private GameObject[] _pool;
 
     [SerializeField]
     private GameObject real;
@@ -25,6 +26,13 @@ public class CreateGhost : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      _pool = new GameObject[count];
+      for (int i = 0; i < count; i++)
+      {
+        _current = Instantiate(real);
+        _current.SetActive(false);
+        _pool[i] = _current;
+      }
       this.gameObject.GetComponent<Image>().sprite = real.GetComponent<SpriteRenderer>().sprite;
       _holding = false;
       _ghost = GameObject.Instantiate(real, new Vector2(0, 0), Quaternion.identity);
@@ -38,7 +46,8 @@ public class CreateGhost : MonoBehaviour
       if (Input.GetKeyUp(KeyCode.Mouse0) && _holding && count > 0)
       {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        _current = GameObject.Instantiate(real, mousePos, Quaternion.identity);
+        _current = _pool[count - 1];
+        _current.transform.position = mousePos;
         Debug.Log("I have been dropped!");
         _holding = false;
         _ghost.gameObject.SetActive(false);
