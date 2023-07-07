@@ -6,24 +6,44 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Collider2D))]
 public class DamagePlayer : MonoBehaviour
 {
+
+    [SerializeField] private ParticleSystem deathParticles;
+
+    [SerializeField] private Rigidbody2D rb;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("DamagePlayer"))
         {
-            reloadScene();
+            StartCoroutine(reloadScene());
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("DamagePlayer"))
         {
-            reloadScene();
+            StartCoroutine(reloadScene());
         }
     }
 
-    void reloadScene()
+    IEnumerator reloadScene()
     {
+
+        Debug.Log("Collison");
+
+        rb.bodyType = RigidbodyType2D.Static;
+
+        if (!deathParticles.isPlaying)
+        {
+            deathParticles.Play();
+
+        }
+
+        yield return new WaitForSeconds(deathParticles.duration);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+
+
 }

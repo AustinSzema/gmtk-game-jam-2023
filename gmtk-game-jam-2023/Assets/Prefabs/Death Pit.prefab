@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 1330611197155404853}
   - component: {fileID: 4835620841051184272}
   - component: {fileID: 3233197868635452210}
-  - component: {fileID: 837311202824213648}
   m_Layer: 0
   m_Name: Death Pit
-  m_TagString: Untagged
+  m_TagString: DamagePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,11 +27,11 @@ Transform:
   m_GameObject: {fileID: 6481520272952187798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.1, y: -9.04, z: 0}
-  m_LocalScale: {x: 10.184223, y: 1.8940765, z: 2.9711}
+  m_LocalScale: {x: 23.756737, y: 1.8940765, z: 2.9711}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4835620841051184272
 SpriteRenderer:
@@ -131,15 +130,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &837311202824213648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6481520272952187798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c138cf0c63f18364aaf21472155005dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
