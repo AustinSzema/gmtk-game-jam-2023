@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8427429713364381143}
   - component: {fileID: 558834925706940639}
   - component: {fileID: 2985717382971501981}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &558834925706940639
 SpriteRenderer:

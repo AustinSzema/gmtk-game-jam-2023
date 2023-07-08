@@ -32,7 +32,7 @@ public class AutoMove : MonoBehaviour
     {
         Debug.DrawRay(raycastPosition.position, transform.right, Color.yellow);
 
-        if(Physics2D.Raycast(raycastPosition.position, transform.right, 1f))
+        if(Physics2D.Raycast(raycastPosition.position, transform.right, 1f, whatIsWall))
         {
             moveDirection *= -1f;
             Debug.Log(moveDirection);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5916504280687747170}
   - component: {fileID: 4408678805969248388}
   - component: {fileID: -3102149033138976594}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: One Way Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7103817629898495145
 SpriteRenderer:
