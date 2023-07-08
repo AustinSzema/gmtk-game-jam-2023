@@ -37,7 +37,11 @@ public class MoveObstacle : MonoBehaviour
 
     private void OnMouseDown()
     {
-      _holding = true;
+      if (movable)
+      {
+        _holding = true;    
+      }
+    
     }
 
     private void OnMouseOver()
