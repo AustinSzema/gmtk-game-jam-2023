@@ -31,7 +31,7 @@ public class DamagePlayer : MonoBehaviour
 
         Debug.Log("Collison");
 
-        rb.bodyType = RigidbodyType2D.Static;
+        rb.Sleep();
 
         if (!deathParticles.isPlaying)
         {
@@ -40,8 +40,7 @@ public class DamagePlayer : MonoBehaviour
         }
 
         yield return new WaitForSeconds(deathParticles.duration);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameObject.FindGameObjectWithTag("SoftResetButton").GetComponent<MoveToStart>().MoveToStartingPos();
     }
 
 

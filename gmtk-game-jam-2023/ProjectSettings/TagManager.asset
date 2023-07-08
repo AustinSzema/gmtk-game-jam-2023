@@ -8,6 +8,7 @@ TagManager:
   - DamagePlayer
   - Start
   - InventoryPanel
+  - SoftResetButton
   layers:
   - Default
   - TransparentFX
