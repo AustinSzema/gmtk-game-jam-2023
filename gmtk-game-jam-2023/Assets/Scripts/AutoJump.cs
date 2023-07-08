@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// THIS FILE HAS BEEN DEPRICATED, FUNCTIONALITY MOVED TO AutoMove.cs
+/// </summary>
 public class AutoJump : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;

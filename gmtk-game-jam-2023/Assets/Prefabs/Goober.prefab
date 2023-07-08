@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6147661876548548390}
   - component: {fileID: 3229499003641603690}
   - component: {fileID: 3946291206698371168}
-  - component: {fileID: 3216089116212625067}
   - component: {fileID: 1203882264644384349}
   m_Layer: 2
   m_Name: Goober
@@ -37,7 +36,7 @@ Transform:
   - {fileID: 9162017458145885421}
   - {fileID: 879688494669185317}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6147661876548548390
 Rigidbody2D:
@@ -55,7 +54,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 47406d30b6bffb84faeb087657c471ec, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -80,10 +79,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6147661876548548390}
   moveSpeed: 5
+  triggerJumpDistance: 1
+  jumpForce: 10
+  _move: 0
+  isGrounded: 0
   whatIsWall:
     serializedVersion: 2
     m_Bits: 1024
-  raycastPosition: {fileID: 9162017458145885421}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  footPosition: {fileID: 0}
+  frontPosition: {fileID: 0}
 --- !u!70 &3946291206698371168
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -119,23 +126,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.04537058, y: 0.068909764}
   m_Size: {x: 1.7259302, y: 2.7922776}
   m_Direction: 0
---- !u!114 &3216089116212625067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300412224397656112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0c9ce9ca6feb4c40b36b02b4591624e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6147661876548548390}
-  jumpForce: 10
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!114 &1203882264644384349
 MonoBehaviour:
   m_ObjectHideFlags: 0
