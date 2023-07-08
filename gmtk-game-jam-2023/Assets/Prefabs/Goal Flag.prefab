@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8930080160513288757}
   - component: {fileID: 7580355990800003471}
-  - component: {fileID: 9141483400719486891}
+  - component: {fileID: 8930673416934128191}
   - component: {fileID: 6200688740923898456}
   m_Layer: 2
   m_Name: Goal Flag
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4274fd7cc261a214f8ebbdc7ad54dcde, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5a80460c52271aa4c83bf8f09dd2becd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9141483400719486891
+--- !u!61 &8930673416934128191
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.18508196, y: -0.021774292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.96, y: 1.98}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.96, y: 1.98}
+  m_Size: {x: 3.2362757, y: 3.824184}
   m_EdgeRadius: 0
 --- !u!114 &6200688740923898456
 MonoBehaviour:
