@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8153863117180847380}
   - component: {fileID: 322197829297045040}
   - component: {fileID: 5046121345572799054}
+  - component: {fileID: 3322550466841924465}
   m_Layer: 0
   m_Name: Roman Column
   m_TagString: Wall
@@ -152,3 +153,17 @@ PolygonCollider2D:
       - {x: 0.355, y: -1.235}
       - {x: 0.295, y: -1.1949999}
   m_UseDelaunayMesh: 0
+--- !u!114 &3322550466841924465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9090809380249005400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591356e66214f7143904a4cf6fbbc8ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movable: 0
+  deletable: 0

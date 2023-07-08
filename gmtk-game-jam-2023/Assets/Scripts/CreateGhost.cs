@@ -30,6 +30,7 @@ public class CreateGhost : MonoBehaviour
       for (int i = 0; i < count; i++)
       {
         _current = Instantiate(real);
+        _current.GetComponent<MoveObstacle>().movable = true;
         _current.SetActive(false);
         _pool[i] = _current;
       }
