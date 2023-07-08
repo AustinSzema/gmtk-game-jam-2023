@@ -37,7 +37,7 @@ Transform:
   - {fileID: 9162017458145885421}
   - {fileID: 879688494669185317}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7704968469824318095
 SpriteRenderer:
@@ -134,7 +134,7 @@ MonoBehaviour:
   moveSpeed: 5
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   raycastPosition: {fileID: 9162017458145885421}
 --- !u!70 &3946291206698371168
 CapsuleCollider2D:

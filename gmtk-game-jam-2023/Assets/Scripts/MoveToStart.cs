@@ -27,5 +27,6 @@ public class MoveToStart : MonoBehaviour
       _plyr.SetActive(false);
       _plyr.SetActive(true);
       _panel.SetActive(true);
+      GameController.editing = true;
     }
 }

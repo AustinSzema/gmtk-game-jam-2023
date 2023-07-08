@@ -21,7 +21,7 @@ public class MoveObstacle : MonoBehaviour
     {
       
       
-      if (_holding)
+      if (_holding && GameController.editing)
       {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         this.gameObject.transform.position = mousePos;
@@ -46,7 +46,7 @@ public class MoveObstacle : MonoBehaviour
 
     private void OnMouseOver()
     { 
-      if (Input.GetKeyDown(KeyCode.Mouse1) && deletable)
+      if (Input.GetKeyDown(KeyCode.Mouse1) && deletable && GameController.editing)
       {
         if (!parentButton)
         {

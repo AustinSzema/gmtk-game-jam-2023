@@ -16,6 +16,7 @@ public class PlayButton : MonoBehaviour
 
     public void Pressed()
     {
+      GameController.editing = false;
       _panel.SetActive(false);
       _plyr.Play(); 
     }
