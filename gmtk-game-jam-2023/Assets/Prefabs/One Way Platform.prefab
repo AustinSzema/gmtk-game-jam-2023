@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5916504280687747170}
   - component: {fileID: 4408678805969248388}
   - component: {fileID: -3102149033138976594}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: One Way Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7103817629898495145
 SpriteRenderer:
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013317108, y: 0.8538931}
+  m_Offset: {x: 0.013317108, y: 0.026893377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.2481585, y: 0.10793769}
+  m_Size: {x: 6.2481585, y: 1.7619371}
   m_EdgeRadius: 0
 --- !u!251 &4408678805969248388
 PlatformEffector2D:
@@ -165,3 +165,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movable: 0
   deletable: 0
+  parentButton: {fileID: 0}
