@@ -134,7 +134,7 @@ MonoBehaviour:
   moveSpeed: 5
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   raycastPosition: {fileID: 9162017458145885421}
 --- !u!70 &3946291206698371168
 CapsuleCollider2D:
