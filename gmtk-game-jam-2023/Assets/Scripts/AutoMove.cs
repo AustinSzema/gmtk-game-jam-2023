@@ -24,10 +24,11 @@ public class AutoMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Debug.DrawRay(footPosition.position, transform.right, Color.yellow);
         wallCast = Physics2D.BoxCast(transform.position, new Vector2(triggerJumpDistance, transform.localScale.y), 00f, transform.right, triggerJumpDistance, whatIsWall);
+        RaycastHit2D ray = Physics2D.BoxCast(footPosition.position, new Vector2(transform.localScale.x / 2, 0.1f), 0f, -transform.up, 0.1f, whatIsGround);
+        isGrounded = ray;
 
-        if(wallCast)
+        if (wallCast)
         {
             Debug.Log("attempting to jump");
             Jump();
@@ -44,7 +45,7 @@ public class AutoMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") && Physics2D.BoxCast(frontPosition.position, new Vector2(0.1f, transform.localScale.y), 00f, transform.right, 0.1f, whatIsWall))
+        if (Physics2D.BoxCast(frontPosition.position, new Vector2(0.1f, transform.localScale.y), 00f, transform.right, 0.1f, whatIsWall))
         {
             FlipDirection();
         }
@@ -78,9 +79,6 @@ public class AutoMove : MonoBehaviour
     }
     private void Jump()
     {
-        RaycastHit2D ray = Physics2D.BoxCast(transform.position, new Vector2(transform.localScale.x / 2, 0.1f), 0f, -transform.up, 0.1f, whatIsGround);
-        isGrounded = ray;
-
 
         if (isGrounded)
         {
