@@ -11,10 +11,10 @@ public class CreateGhost : MonoBehaviour
 
     private GameObject _ghost;
     [SerializeField] private int count = 5;
+    private int _originalCount;
     private GameObject[] _pool;
 
-    [SerializeField]
-    private GameObject real;
+    public GameObject real;
 
     private GameObject _current;
 
@@ -26,11 +26,14 @@ public class CreateGhost : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      _originalCount = count;
       _pool = new GameObject[count];
       for (int i = 0; i < count; i++)
       {
         _current = Instantiate(real);
         _current.GetComponent<MoveObstacle>().movable = true;
+        _current.GetComponent<MoveObstacle>().deletable = true;
+        _current.GetComponent<MoveObstacle>().parentButton = this;
         _current.SetActive(false);
         _pool[i] = _current;
       }
@@ -75,5 +78,37 @@ public class CreateGhost : MonoBehaviour
         _holding = true;  
       }
       
+    }
+
+    public void DeleteObject(GameObject go)
+    {
+      Debug.Log("Delete Object was called");
+      go.SetActive(false);
+      count++;
+      GameObject[] newPool = new GameObject[_originalCount];
+      int i = 0;
+      int j = 0;
+
+      for (i = 0; i < _originalCount; i++)
+      {
+        if (_pool[i].activeSelf)
+        {
+          newPool[j] = _pool[i];
+          j++;
+        } 
+      }
+      
+      for (i = 0; i < _originalCount; i++)
+      {
+        if (!(_pool[i].activeSelf))
+        {
+          newPool[j] = _pool[i];
+          j++;
+        } 
+      }
+
+      _pool = newPool;
+      countText.text = count.ToString();
+
     }
 }
