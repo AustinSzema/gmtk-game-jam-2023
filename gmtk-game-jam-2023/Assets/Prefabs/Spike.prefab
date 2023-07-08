@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6532140093209725354}
   - component: {fileID: 8277705961513944358}
-  - component: {fileID: 3553413789761917}
+  - component: {fileID: 1687560383005832357}
   m_Layer: 0
   m_Name: Spike
   m_TagString: DamagePlayer
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8277705961513944358
 SpriteRenderer:
@@ -79,13 +79,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 15.62, y: 15.81}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3553413789761917
+--- !u!58 &1687560383005832357
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +117,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0063614845, y: -0.12895644}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.2808951
+  m_Radius: 0.64
