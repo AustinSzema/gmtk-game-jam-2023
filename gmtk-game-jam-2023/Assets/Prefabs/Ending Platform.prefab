@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8690441124514211343}
   - component: {fileID: 3407858472251225099}
-  - component: {fileID: 1768181218992798342}
+  - component: {fileID: 4482675678063887315}
   m_Layer: 10
   m_Name: Ending Platform
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1768181218992798342
+--- !u!61 &4482675678063887315
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,5 +128,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.97, y: 1.25}
+  m_Size: {x: 0.74, y: 0.71}
   m_EdgeRadius: 0
