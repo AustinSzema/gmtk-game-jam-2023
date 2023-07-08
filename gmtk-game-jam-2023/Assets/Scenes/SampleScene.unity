@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spring
       objectReference: {fileID: 0}
+    - target: {fileID: 8638759145216209603, guid: a3ced785d27cb2b41966818f69df2d7c, type: 3}
+      propertyPath: springPower
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
