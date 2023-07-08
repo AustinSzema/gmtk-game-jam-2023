@@ -10,26 +10,31 @@ public class AutoMove : MonoBehaviour
 
     private float moveDirection = 1f;
 
+    [SerializeField] private LayerMask whatIsWall;
+
+    [SerializeField] private Transform raycastPosition;
     // Update is called once per frame
     void Update()
     {
-        Move();
-    }
+        Debug.DrawRay(raycastPosition.position, transform.right, Color.yellow);
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Wall"))
+        if(Physics2D.Raycast(raycastPosition.position, transform.right, 1f))
         {
             moveDirection *= -1f;
-            if(moveDirection > 0f)
+            Debug.Log(moveDirection);
+            if (moveDirection > 0f)
             {
-                transform.rotation = Quaternion.identity;
+                transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
             }
             else
             {
                 transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
             }
         }
+
+
+        Move();
+
     }
 
     private void Move()

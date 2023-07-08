@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8153863117180847380}
-  - component: {fileID: 322197829297045040}
-  - component: {fileID: 5046121345572799054}
+  - component: {fileID: 3723033336793887128}
+  - component: {fileID: 7227289701478082704}
   - component: {fileID: 3322550466841924465}
   m_Layer: 0
   m_Name: Roman Column
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &322197829297045040
+--- !u!212 &3723033336793887128
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5046121345572799054
+--- !u!60 &7227289701478082704
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
