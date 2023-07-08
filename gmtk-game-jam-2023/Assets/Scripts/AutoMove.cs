@@ -5,62 +5,71 @@ using UnityEngine;
 
 public class AutoMove : MonoBehaviour
 {
+  [SerializeField] private Rigidbody2D rb;
+  [SerializeField] private float moveSpeed = 5f;
+  private bool _move = false;
 
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float moveSpeed = 5f;
-    private bool _move = false;
+  private float moveDirection = 1f;
 
-    private float moveDirection = 1f;
+  [SerializeField] private LayerMask whatIsWall;
 
-    [SerializeField] private LayerMask whatIsWall;
+  [SerializeField] private Transform raycastPosition;
+  private Collider2D _collider2D;
 
-    [SerializeField] private Transform raycastPosition;
+  private void Start()
+  {
+    _move = false;
+    _collider2D = GetComponent<Collider2D>();
+  }
 
-    private void Start()
+  private void OnEnable()
+  {
+    _move = false;
+    moveDirection = 1f;
+    transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+  }
+
+  void Update()
+  {
+    if (GameController.editing)
     {
-        _move = false;
+      rb.Sleep();
+      _collider2D.enabled = false;
     }
-
-    private void OnEnable()
+    else
     {
-        _move = false;
-        moveDirection = 1f;
-        transform.rotation  = new Quaternion(0f, 0f, 0f, 0f);
+      rb.WakeUp();
+      _collider2D.enabled = true;
     }
+      Move();
+      
+  }
 
-    void Update()
+  private void Move()
+  {
+    if (_move)
     {
-        Debug.DrawRay(raycastPosition.position, transform.right, Color.yellow);
+      Debug.DrawRay(raycastPosition.position, transform.right, Color.yellow);
 
-        if(Physics2D.Raycast(raycastPosition.position, transform.right, 1f, whatIsWall))
+      if (Physics2D.Raycast(raycastPosition.position, transform.right, 1f, whatIsWall))
+      {
+        moveDirection *= -1f;
+        Debug.Log(moveDirection);
+        if (moveDirection > 0f)
         {
-            moveDirection *= -1f;
-            Debug.Log(moveDirection);
-            if (moveDirection > 0f)
-            {
-                transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
-            }
-            else
-            {
-                transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
-            }
+          transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         }
-
-
-        Move();
-
-    }
-
-    private void Move()
-    {
-        if (_move)
+        else
         {
-         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);           
+          transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
         }
+      }
+      rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
     }
+  }
 
-    public void Play()
-    {
-        _move = true;
-    }
+  public void Play()
+  {
+    _move = true;
+  }
 }
