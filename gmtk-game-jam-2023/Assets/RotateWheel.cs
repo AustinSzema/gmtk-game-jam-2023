@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class RotateWheel : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 1f;
+    [SerializeField] private float rotationSpeed = -200f;
+    [SerializeField] private Rigidbody2D playerRB;
+
     void Update()
     {
-        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+        if (playerRB.velocity != Vector2.zero)
+        {
+            transform.Rotate(Vector3.forward * Mathf.Abs(playerRB.velocity.x) * rotationSpeed * Time.deltaTime);
+
+        }
     }
 }
