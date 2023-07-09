@@ -15,6 +15,21 @@ public class DamagePlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePlayer"))
         {
+            VisualSoundPresets choice;
+            int randomChoice = Random.Range(0, 2);
+            if (randomChoice == 0)
+            {
+                choice = VisualSoundPresets.Kaboom;
+            }
+            else if (randomChoice == 1)
+            {
+                choice = VisualSoundPresets.Bang;
+            }
+            else
+            {
+                choice = VisualSoundPresets.Pow;
+            }
+            Events.SpawnWorldSpaceSound.Invoke(choice, transform.position + new Vector3(0, 30), 1f);
             StartCoroutine(reloadScene());
         }
     }
@@ -22,9 +37,21 @@ public class DamagePlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePlayer"))
         {
-            /*Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
-            Vector3 uiPos = new Vector3(screenPos.x, Screen.height - screenPos.y, screenPos.z);
-            Events.SpawnScaledSound.Invoke(VisualSoundPresets.Bang, uiPos, 2);*/
+            VisualSoundPresets choice;
+            int randomChoice = Random.Range(0, 2);
+            if (randomChoice == 0)
+            {
+                choice = VisualSoundPresets.Kaboom;
+            }
+            else if (randomChoice == 1)
+            {
+                choice = VisualSoundPresets.Bang;
+            }
+            else
+            {
+                choice = VisualSoundPresets.Pow;
+            }
+            Events.SpawnWorldSpaceSound.Invoke(choice, rb.transform.position, 1f);
             StartCoroutine(reloadScene());
         }
     }

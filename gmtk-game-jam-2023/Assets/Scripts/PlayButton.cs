@@ -16,10 +16,15 @@ public class PlayButton : MonoBehaviour
 
     public void Pressed()
     {
-      GameController.editing = false;
+        if (GameController.editing)
+        {
+            _plyr.GetComponent<Duster>().Dust();
+        }
+        GameController.editing = false;
       _panel.SetActive(false);
       _plyr.Play();
-        _plyr.GetComponent<Duster>().Dust();
+        
+        
     }
         
 }

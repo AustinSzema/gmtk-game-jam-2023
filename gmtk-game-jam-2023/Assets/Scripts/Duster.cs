@@ -40,9 +40,8 @@ public class Duster : MonoBehaviour
                         ParticleSystem dust = GameObject.Instantiate(dustPrefab, feetPosition.position, dustPrefab.transform.rotation).GetComponent<ParticleSystem>();
                         dust.startColor = color;
                         dust.Play();
-                        /*Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
-                        Vector3 uiPos = new Vector3(screenPos.x, Screen.height - screenPos.y, screenPos.z);
-                        Events.SpawnSound.Invoke(VisualSoundPresets.Squeak, uiPos);*/
+                        Events.SpawnWorldSpaceSound.Invoke(VisualSoundPresets.Squeak, feetPosition.position, 0.5f);
+
                     }
                 }
             }

@@ -116,6 +116,5 @@ public class AutoMove : MonoBehaviour
   public void Play()
   {
     _move = true;
-        duster.StartDuster();
   }
 }
