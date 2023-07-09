@@ -5,5 +5,6 @@
     Squeak,
     Kaboom,
     Click,
-    Boing
+    Boing,
+    Knock
 }

@@ -11,6 +11,7 @@ public class Spring : MonoBehaviour
         {
             GameObject player = collision.gameObject;
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Rigidbody2D>().velocity.x, springPower);
+            Events.SpawnSound.Invoke(VisualSoundPresets.Boing, transform.position);
         }
     }
 }

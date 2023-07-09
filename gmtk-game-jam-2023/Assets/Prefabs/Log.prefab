@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 558834925706940639}
   - component: {fileID: 1412691122875025508}
   - component: {fileID: 1796017871006628924}
+  - component: {fileID: -8457803692646550992}
   m_Layer: 10
   m_Name: Log
   m_TagString: Untagged
@@ -146,3 +147,16 @@ MonoBehaviour:
   movable: 0
   deletable: 0
   parentButton: {fileID: 0}
+--- !u!114 &-8457803692646550992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2245915883168032138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2a9bcf26c4a694ea28dd7f8c934489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _preset: 0

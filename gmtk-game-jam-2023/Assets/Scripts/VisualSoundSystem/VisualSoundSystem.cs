@@ -56,6 +56,9 @@ public class VisualSoundSystem : MonoBehaviour
             case VisualSoundPresets.Boing:
                 text = "<BOING>";
                 break;
+            case VisualSoundPresets.Knock:
+                text = "<KNOCK>";
+                break;
             default:
                 text = "<fart>";
                 break;
