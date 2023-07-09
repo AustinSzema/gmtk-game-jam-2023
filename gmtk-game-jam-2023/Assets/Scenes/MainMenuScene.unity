@@ -322,13 +322,29 @@ PrefabInstance:
       value: -7.9035225
       objectReference: {fileID: 0}
     - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f00ffb754fbd4c45ab586eaaba809da, type: 2}
+    - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
       propertyPath: m_fontSizeBase
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1072529844213253421, guid: 4f00ffb754fbd4c45ab586eaaba809da, type: 2}
+    - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886894671196706319, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1072529844213253421, guid: 4f00ffb754fbd4c45ab586eaaba809da, type: 2}
     - target: {fileID: 5246897435889069150, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -515,13 +531,29 @@ PrefabInstance:
       value: -7.9035225
       objectReference: {fileID: 0}
     - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f00ffb754fbd4c45ab586eaaba809da, type: 2}
+    - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
       propertyPath: m_fontSizeBase
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1072529844213253421, guid: 4f00ffb754fbd4c45ab586eaaba809da, type: 2}
+    - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3367763423648207218, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886894671196706319, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1072529844213253421, guid: 4f00ffb754fbd4c45ab586eaaba809da, type: 2}
     - target: {fileID: 5246897435889069150, guid: 656170c4262f00c4da6274958a3fb310, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -745,7 +777,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 63aa6f1bf523289438b16d63b2b45d27, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
