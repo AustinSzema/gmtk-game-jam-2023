@@ -18,7 +18,8 @@ public class PlayButton : MonoBehaviour
     {
       GameController.editing = false;
       _panel.SetActive(false);
-      _plyr.Play(); 
+      _plyr.Play();
+        _plyr.GetComponent<Duster>().Dust();
     }
         
 }
