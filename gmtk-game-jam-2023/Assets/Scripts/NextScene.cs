@@ -5,9 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
+
+    [SerializeField] private ParticleSystem winParticles;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //loads the next scene in the build index
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+            collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+            StartCoroutine(loadNextScene());
+        }
     }
+
+    IEnumerator loadNextScene()
+    {
+
+        if (!winParticles.isPlaying)
+        {
+            winParticles.Play();
+
+        }
+
+        yield return new WaitForSeconds(winParticles.duration);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+
+
+
 }
