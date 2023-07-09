@@ -206,3 +206,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   springPower: 30
+  springSfx: {fileID: 8300000, guid: 721ed6a5c0892ea40a9e23c2b33457be, type: 3}
