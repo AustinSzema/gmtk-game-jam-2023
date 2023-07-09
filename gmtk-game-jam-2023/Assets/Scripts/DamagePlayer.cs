@@ -22,6 +22,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePlayer"))
         {
+            Events.SpawnScaledSound.Invoke(VisualSoundPresets.Bang, transform.position, 2);
             StartCoroutine(reloadScene());
         }
     }

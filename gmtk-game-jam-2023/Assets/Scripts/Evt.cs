@@ -62,3 +62,23 @@ public class Evt<T, Y>
         _action -= listener;
     }
 }
+
+public class Evt<T, Y, U>
+{
+    private event Action<T, Y, U> _action = delegate { };
+
+    public void Invoke(T param, Y param2, U param3)
+    {
+        _action.Invoke(param, param2, param3);
+    }
+
+    public void AddListener(Action<T, Y, U> listener)
+    {
+        _action += listener;
+    }
+
+    public void RemoveListener(Action<T, Y, U> listener)
+    {
+        _action -= listener;
+    }
+}
