@@ -62,7 +62,7 @@ public class VisualSoundSystem : MonoBehaviour
         }
 
 
-        int offset = Random.Range(-10, 10);
+        int offset = Random.Range(-6, 6);
         GameObject visualSound = Instantiate(textPrefab, position, transform.rotation * new Quaternion(0, 0, 1, offset));
         visualSound.GetComponent<TextMeshProUGUI>().text = text;
         visualSound.transform.SetParent(canvas.transform, true);
