@@ -4,5 +4,6 @@
     Pow,
     Squeak,
     Kaboom,
-    Click
+    Click,
+    Boing
 }

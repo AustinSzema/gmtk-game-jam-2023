@@ -41,12 +41,17 @@ public class VisualSoundSystem : MonoBehaviour
             case VisualSoundPresets.Click:
                 text = "<click>";
                 break;
+            case VisualSoundPresets.Boing:
+                text = "<BOING>";
+                break;
             default:
                 text = "<fart>";
                 break;
         }
 
-        GameObject visualSound = Instantiate(textPrefab, position, transform.rotation);
+
+        int offset = Random.Range(-10, 10);
+        GameObject visualSound = Instantiate(textPrefab, position, transform.rotation * new Quaternion(0, 0, 1, offset));
         visualSound.GetComponent<TextMeshProUGUI>().text = text;
         visualSound.transform.SetParent(canvas.transform, true);
         
