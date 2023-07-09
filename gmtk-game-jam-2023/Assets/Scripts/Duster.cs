@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 using Color = UnityEngine.Color;
 
 public class Duster : MonoBehaviour
@@ -12,7 +13,7 @@ public class Duster : MonoBehaviour
     //[SerializeField] private ParticleSystem dust;
     [SerializeField] private float dustFrequency = 0.5f;
 
-    IEnumerator Start()
+    public IEnumerator StartDuster()
     {
         while (true)
         {
@@ -51,9 +52,13 @@ public class Duster : MonoBehaviour
 
     }
 
-    public void StartDuster()
+    public void Dust()
     {
-        Start();
+        StartCoroutine(StartDuster());
     }
 
+    /*private void Start()
+    {
+        Dust();
+    }*/
 }
