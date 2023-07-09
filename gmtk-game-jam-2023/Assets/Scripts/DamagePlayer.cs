@@ -22,7 +22,9 @@ public class DamagePlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePlayer"))
         {
-            Events.SpawnScaledSound.Invoke(VisualSoundPresets.Bang, transform.position, 2);
+            /*Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+            Vector3 uiPos = new Vector3(screenPos.x, Screen.height - screenPos.y, screenPos.z);
+            Events.SpawnScaledSound.Invoke(VisualSoundPresets.Bang, uiPos, 2);*/
             StartCoroutine(reloadScene());
         }
     }
