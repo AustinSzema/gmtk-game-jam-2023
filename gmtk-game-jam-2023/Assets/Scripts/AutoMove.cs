@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class AutoMove : MonoBehaviour
 {
@@ -16,6 +14,8 @@ public class AutoMove : MonoBehaviour
   [SerializeField] private bool isGrounded;
   RaycastHit2D wallCast;
     private Duster duster;
+    [SerializeField] private AudioClip[] jumpSfx;
+    private int _numJumpSfx;
 
   [SerializeField] private LayerMask whatIsWall;
   [SerializeField] private LayerMask whatIsGround;
@@ -73,6 +73,7 @@ public class AutoMove : MonoBehaviour
     _move = false;
     _collider2D = GetComponent<Collider2D>();
         duster = GetComponent<Duster>();
+        _numJumpSfx = jumpSfx.Length;
   }
 
   private void OnEnable()
@@ -102,6 +103,7 @@ public class AutoMove : MonoBehaviour
     {
       Debug.Log("is jump");
       rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+      AudioSource.PlayClipAtPoint(jumpSfx[UnityEngine.Random.Range(0, _numJumpSfx)], Camera.main.transform.position, .5f);
     }
   }
 

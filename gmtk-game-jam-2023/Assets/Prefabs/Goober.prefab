@@ -86,6 +86,10 @@ MonoBehaviour:
   jumpForce: 20
   _move: 0
   isGrounded: 0
+  jumpSfx:
+  - {fileID: 8300000, guid: 6941f544fdcb30d45b565cb1c5d46969, type: 3}
+  - {fileID: 8300000, guid: 01d990222d59a83458865469107bad7e, type: 3}
+  - {fileID: 8300000, guid: 4eeed8553f78d7b4bafaf07296a413a0, type: 3}
   whatIsWall:
     serializedVersion: 2
     m_Bits: 1024
