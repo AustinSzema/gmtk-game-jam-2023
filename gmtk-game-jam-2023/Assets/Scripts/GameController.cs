@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
       else
       {
         gc = this;
+        editing = true;
       }
       
     }
