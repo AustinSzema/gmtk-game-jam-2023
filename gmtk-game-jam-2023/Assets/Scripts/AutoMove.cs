@@ -15,6 +15,7 @@ public class AutoMove : MonoBehaviour
   private Collider2D _collider2D;
   [SerializeField] private bool isGrounded;
   RaycastHit2D wallCast;
+    private Duster duster;
 
   [SerializeField] private LayerMask whatIsWall;
   [SerializeField] private LayerMask whatIsGround;
@@ -71,6 +72,7 @@ public class AutoMove : MonoBehaviour
   {
     _move = false;
     _collider2D = GetComponent<Collider2D>();
+        duster = GetComponent<Duster>();
   }
 
   private void OnEnable()
@@ -114,5 +116,6 @@ public class AutoMove : MonoBehaviour
   public void Play()
   {
     _move = true;
+        duster.StartDuster();
   }
 }
