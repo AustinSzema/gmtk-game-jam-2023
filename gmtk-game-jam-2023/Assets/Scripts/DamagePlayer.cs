@@ -51,7 +51,7 @@ public class DamagePlayer : MonoBehaviour
             {
                 choice = VisualSoundPresets.Pow;
             }
-            Events.SpawnWorldSpaceSound.Invoke(choice, rb.transform.position, 1f);
+            //Events.SpawnWorldSpaceSound.Invoke(choice, rb.transform.position, 1f);
             StartCoroutine(reloadScene());
         }
     }

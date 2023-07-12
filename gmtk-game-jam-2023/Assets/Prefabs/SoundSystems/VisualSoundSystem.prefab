@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5419800730967658637
 MonoBehaviour:
@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240c47662effbaf40b7b131c91510655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textPrefab: {fileID: 4304785378638700373, guid: 8a8b6096976f898458cc106142dd854b, type: 3}
+  worldSpaceTextPrefab: {fileID: 104605613937474886, guid: 8a8b6096976f898458cc106142dd854b, type: 3}
+  UITextPrefab: {fileID: 104605613937474886, guid: 2584e289b2e1a754c8dfc81700b861e0, type: 3}
   canvas: {fileID: 0}

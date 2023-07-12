@@ -9,49 +9,49 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuScene.unity
     guid: 595b2d3dfc695554b9cbe60da955ee3d
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 1.unity
+    path: Assets/Scenes/Levels/Level Ideas 1.unity
     guid: 6ca8f4c8a4da9a545aa64967c9afde78
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 2.unity
+    path: Assets/Scenes/Levels/Level Ideas 2.unity
     guid: 745ff64338e358346853d703b310af26
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 3.unity
+    path: Assets/Scenes/Levels/Level Ideas 3.unity
     guid: 2a6f94b216b9a5a4bb49b0cc7383fa1f
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 4.unity
+    path: Assets/Scenes/Levels/Level Ideas 4.unity
     guid: 11f74aff2eef65a4ea93fd59eeaec4a8
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 5.unity
+    path: Assets/Scenes/Levels/Level Ideas 5.unity
     guid: 17e02c5423357ef49abb17f31a356969
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 6.unity
+    path: Assets/Scenes/Levels/Level Ideas 6.unity
     guid: 47625de2304a91144a5769dd89cd032b
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 7.unity
+    path: Assets/Scenes/Levels/Level Ideas 7.unity
     guid: ca419ab9594d4034a8dd20501e078798
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 8.unity
+    path: Assets/Scenes/Levels/Level Ideas 8.unity
     guid: 56f5c1e751f3eef44a0cfce3c1b65981
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 9.unity
+    path: Assets/Scenes/Levels/Level Ideas 9.unity
     guid: d98a89b88e94ac44a81ed677a24f0350
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 10.unity
+    path: Assets/Scenes/Levels/Level Ideas 10.unity
     guid: d86bf3438b689fe4d96dfe0c3d079ea4
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 11.unity
+    path: Assets/Scenes/Levels/Level Ideas 11.unity
     guid: bb646f24809257a4ebe221f2f0e3a21e
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 12.unity
+    path: Assets/Scenes/Levels/Level Ideas 12.unity
     guid: 7c460e54434ea1c42be3533a2757f412
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 13.unity
+    path: Assets/Scenes/Levels/Level Ideas 13.unity
     guid: 1f12072759545bb4889263a32f34941f
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 14.unity
+    path: Assets/Scenes/Levels/Level Ideas 14.unity
     guid: b9fab5d74af00634dbe68e1bec9563ed
   - enabled: 1
-    path: Assets/Scenes/Level Ideas 15.unity
+    path: Assets/Scenes/Levels/Level Ideas 15.unity
     guid: bf7718b84bade234cb5d90de96f883c5
   - enabled: 1
     path: Assets/Scenes/Credits Scene.unity

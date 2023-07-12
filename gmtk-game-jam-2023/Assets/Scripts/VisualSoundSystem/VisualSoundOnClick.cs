@@ -10,7 +10,7 @@ public class VisualSoundOnClick : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("click");
-        Events.SpawnSound.Invoke(_preset, eventData.position);
+        Events.SpawnUIVisualSound.Invoke(_preset, eventData.position, 1);
     }
 
 }

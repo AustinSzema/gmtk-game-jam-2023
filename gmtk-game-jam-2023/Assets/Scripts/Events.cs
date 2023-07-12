@@ -11,7 +11,7 @@ public static class Events
     //public static readonly Evt<HexTile> OnHighlightTile = new Evt<HexTile>();
     //public static readonly Evt<GameObject> UserInterfaceSelectUpdate = new Evt<GameObject>();
 
-    public static readonly Evt<VisualSoundPresets, Vector2> SpawnSound = new Evt<VisualSoundPresets, Vector2>();
-    public static readonly Evt<VisualSoundPresets, Vector2, float> SpawnScaledSound = new Evt<VisualSoundPresets, Vector2, float>();
+    //public static readonly Evt<VisualSoundPresets, Vector2> SpawnSound = new Evt<VisualSoundPresets, Vector2>();
+    public static readonly Evt<VisualSoundPresets, Vector2, float> SpawnUIVisualSound = new Evt<VisualSoundPresets, Vector2, float>();
     public static readonly Evt<VisualSoundPresets, Vector2, float> SpawnWorldSpaceSound = new Evt<VisualSoundPresets, Vector2, float>();
 }
